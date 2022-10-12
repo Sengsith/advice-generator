@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+/* Custom Properties */
+:root {
+  --clr-primary-lightcyan: hsl(193, 38%, 86%); /* Quote */
+  --clr-primary-neongreen: hsl(150, 100%, 66%); /* Advice # / Dice BG*/
+
+  --clr-neutral-grayishblue: hsl(217, 19%, 38%); /*  */
+  --clr-neutral-darkgrayishblue: hsl(217, 19%, 24%); /* Container */
+  --clr-neutral-darkblue: hsl(218, 23%, 16%); /* Main BG */
+
+  --fs-body: 1.75rem;
+  --ff-body: 'Manrope', sans-serif;
+  --fw-extrabold: 800;
+}
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-extrabold);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--clr-neutral-darkblue);
+  color: var(--clr-primary-neongreen);
+}
+
+h1 {
+  font-size: .875rem;
+  letter-spacing: .25rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  color: var(--clr-primary-lightcyan);
+  font-size: var(--fs-body);
+  margin-bottom: 1.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  max-width: calc(100vw - 2rem);
+  background-color: var(--clr-neutral-darkgrayishblue);
+  padding: 3rem .5rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+button {
+  background-color: var(--clr-primary-neongreen);
+  border: none;
+  border-radius: 100vmax;
+  display: flex;
+  padding: 1rem;
+  position: absolute;
+  bottom: -1.75rem;
+  transition: 150ms ease-in-out
+}
+button:hover {
+  cursor: pointer;
+  scale: 1.1;
+  box-shadow: 0 0 20px var(--clr-primary-neongreen);
+}
+
+.attribution { 
+  font-size: .875rem; 
+  text-align: center;
+  margin-top: 5rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 800px) {
+  body {
+    justify-content: center;
+  }
+
+  main {
+    margin-top: 0;
+    max-width: 50rem;
+    padding-inline: 3rem;
+  }
+}
